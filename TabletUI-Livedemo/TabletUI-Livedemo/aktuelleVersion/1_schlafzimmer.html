@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * main page
+     *
+     load this page via widget pagebutton
+	-->
+
+</head>
+<body>
+  <div class="page" id="1_schlafzimmer">
+    <div class="gridster">
+    <ul>
+    
+<!--############################################################################-->
+<li class="" data-row="1" data-col="1" data-sizex="3" data-sizey="4">
+        <header class="">TEMPERATUR / LUFTFEUCHTE</header>
+        <div class="top-space">
+            <div data-type="label"
+                 data-device="SZ_Temperatur"
+                 data-get="state"
+                 data-unit="%B0C%0A"
+                 data-limits='[-70,20,25]'
+                 data-colors='["cornflowerblue","green","firebrick"]'
+                 class="big inline">
+            </div>
+            <div data-type="label"
+                 data-device="SZ_Luftfeuchtigkeit"
+                 data-get="state"
+                 data-unit="%"
+                 data-limits='[0,50,71]'
+                 data-colors='["cornflowerblue","green","firebrick"]'
+                 class="big inline left-space">
+            </div>
+            <hr width="85%" class="top-space">
+            <div class="bigger orange">
+                Schlafzimmer
+            </div>
+        </div>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="6" data-sizey="4">
+            <header>Wetter in Karlsruhe</header>
+            <table width="90%" class="">
+                <tr>
+                    <td rowspan="5" style="text-align:center;vertical-align:top">
+                        <div data-type="weather" data-device="YahooWetter" data-get="condition" data-imageset="kleinklima" style="width:150px" class="centered">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="YahooWetter" data-get="temperature" data-fix="1" data-limits='[-73,18,28]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%B0C%0A" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statTemperatureTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statTemperatureTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Temperatur
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="YahooWetter" data-get="humidity" data-limits='[0,40,71]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statHumidityTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statHumidityTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Luftfeuchte
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Wind:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="wind" data-unit="km/h" data-limits="[0, 20, 29, 39, 50, 62, 75, 89, 103, 117]"
+                                    data-colors='["green","green","#aa6900","#aa6900","firebrick","firebrick","firebrick","red","red","red"]'
+                                    style="display:inline" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Sicht:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="visibility" data-unit="km" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Druck:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="pressure" data-unit="hPa" data-limits="[0,1005,1015]" data-colors='["cornflowerblue","green","#aa6900"]'
+                                    class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+            </table>
+        </li>
+
+        <li data-row="1" data-col="10" data-sizex="2" data-sizey="4">
+            <header class="">Uhrzeit / Datum</header>
+            <div clas="center-align">
+                <div data-type="clock" data-format="H:i:s" data-interval="1000" class="orange bigger top-space">
+                </div>
+                <div data-type="clock" data-format="D. d.m.Y" data-shortday-length="2" class="grey big">
+                </div>
+            </div>
+        </li>
+
+<!--############################################################################-->
+
+
+
+
+                <li data-row="5" data-col="1" data-sizex="2" data-sizey="4">
+                        <header>Nachttischlampen</header>
+                        <div class="top-space">
+                            <div class="inline">
+                                <div data-type="switch"
+                                data-device="SZ_Nachttisch_Daniel"
+                                data-on-color="black"
+                                data-off-color="#808080"
+                                data-on-background-color="cornflowerblue"
+                                data-off-background-color="#3D4C66"
+                                data-icon="fa-lightbulb-o"
+                                class="normal inline left-space">
+                           </div>
+                           <div>Daniel</div>
+                            </div>
+                            <div class="inline">
+                                <div data-type="switch"
+                                data-device="SZ_Nachttisch_Kaja"
+                                data-on-color="black"
+                                data-off-color="#808080"
+                                data-on-background-color="cornflowerblue"
+                                data-off-background-color="#3D4C66"
+                                data-icon="fa-lightbulb-o"
+                                class="normal inline">
+                           </div>
+                           <div>Kaja</div>
+                            </div>
+                        </div>
+                    </li>
+    
+    </ul>
+    </div>
+  </div>
+</body>
+</html>

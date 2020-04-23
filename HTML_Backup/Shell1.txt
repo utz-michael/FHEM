@@ -1,0 +1,4 @@
+SwitchMode1 4
+
+
+für Taster Funktion

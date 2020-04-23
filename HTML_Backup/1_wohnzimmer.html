@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * main page
+     *
+     load this page via widget pagebutton
+	-->
+
+</head>
+
+<body>
+    <div class="page" id="1_wohnzimmer">
+        <div class="gridster">
+            <ul>
+
+<!--############################################################################-->
+<li class="" data-row="1" data-col="1" data-sizex="3" data-sizey="4">
+        <header class="">TEMPERATUR / LUFTFEUCHTE</header>
+        <div class="top-space">
+            <div data-type="label"
+                 data-device="WZ_Temperatur"
+                 data-get="state"
+                 data-unit="%B0C%0A"
+                 data-limits='[-70,20,25]'
+                 data-colors='["cornflowerblue","green","firebrick"]'
+                 class="big inline">
+            </div>
+            <div data-type="label"
+                 data-device="WZ_Luftfeuchtigkeit"
+                 data-get="state"
+                 data-unit="%"
+                 data-limits='[0,50,71]'
+                 data-colors='["cornflowerblue","green","firebrick"]'
+                 class="big inline left-space">
+            </div>
+            <hr width="85%" class="top-space">
+            <div class="bigger orange">
+                Wohnzimmer
+            </div>
+        </div>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="6" data-sizey="4">
+            <header>Wetter in Karlsruhe</header>
+            <table width="90%" class="">
+                <tr>
+                    <td rowspan="5" style="text-align:center;vertical-align:top">
+                        <div data-type="weather" data-device="YahooWetter" data-get="condition" data-imageset="kleinklima" style="width:150px" class="centered">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="YahooWetter" data-get="temperature" data-fix="1" data-limits='[-73,18,28]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%B0C%0A" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statTemperatureTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statTemperatureTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Temperatur
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="YahooWetter" data-get="humidity" data-limits='[0,40,71]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statHumidityTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="YahooWetter" data-get="statHumidityTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Luftfeuchte
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Wind:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="wind" data-unit="km/h" data-limits="[0, 20, 29, 39, 50, 62, 75, 89, 103, 117]"
+                                    data-colors='["green","green","#aa6900","#aa6900","firebrick","firebrick","firebrick","red","red","red"]'
+                                    style="display:inline" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Sicht:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="visibility" data-unit="km" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align left-space">
+                                    Druck:
+                                </div>
+                                <div data-type="label" data-device="YahooWetter" data-get="pressure" data-unit="hPa" data-limits="[0,1005,1015]" data-colors='["cornflowerblue","green","#aa6900"]'
+                                    class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+            </table>
+        </li>
+
+        <li data-row="1" data-col="10" data-sizex="2" data-sizey="4">
+            <header class="">Uhrzeit / Datum</header>
+            <div clas="center-align">
+                <div data-type="clock" data-format="H:i:s" data-interval="1000" class="orange bigger top-space">
+                </div>
+                <div data-type="clock" data-format="D. d.m.Y" data-shortday-length="2" class="grey big">
+                </div>
+            </div>
+        </li>
+
+<!--############################################################################-->
+
+
+
+
+                <li data-row="5" data-col="1" data-sizex="3" data-sizey="5">
+                    <header class="">Entertainment</header>
+                    <div class="top-space">
+                        <div class="inline top-align top-space-2x">
+                            <div valign="top" data-type="switch" data-device="WZ_Entertainment" data-get-on="set-on" data-set-on="on" data-on-color="black"
+                                data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                data-icon="oa-scene_scene" class="normal">
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div class="top-space">
+                                Power:
+                            </div>
+                            <div data-type="label" data-device="WZ_TV_Power" data-get="state" data-unit="W" data-limits='[0,20,50]' data-colors='["#6699FF","green","firebrick"]'
+                                class="big">
+                            </div>
+                            <div class="top-space">
+                                Verbrauch:
+                            </div>
+                            <div data-type="label" data-device="WZ_TV_Verbrauch" data-get="Verbrauch" data-fix="2" data-unit="kW/h" data-limits='[0,20,50]'
+                                data-colors='["#6699FF","green","firebrick"]' class="big">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="" data-row="5" data-col="4" data-sizex="3" data-sizey="7">
+                    <header class="">Hängelampe</header>
+                    <div class="inline">
+                        <div class="left-space right-space">
+                            <div class="inline top-space">
+                                <div valign="top" data-type="switch" data-device="WZ_Haengelampe" data-get-on="on.*" data-set-on="on" data-on-color="black"
+                                    data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="oa-light_pendant_light_round" class="normal">
+                                </div>
+                                <div class="">
+                                    An/Aus
+                                </div>
+                            </div>
+                            <div class="inline top-space">
+                                <div data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="FFFFFF" data-off-color="#808080" data-off-background-color="#3D4C66"
+                                    data-icon="fa-paint-brush" class="normal">
+                                </div>
+                                <div class="">
+                                    Weiß
+                                </div>
+                            </div>
+                            <div class="inline top-space">
+                                <div data-type="popup" data-height="150px" data-width="700px" class="">
+                                    <div data-type="push" data-icon="fa-paint-brush" data-off-color="#808080" data-off-background-color="#3D4C66" class="">
+                                    </div>
+                                    <div class="">
+                                        Farbe
+                                    </div>
+                                    <div class="dialog dialogTransparent">
+                                        <header class="dialogheaderTransparent">LED-Leiste</header>
+                                        <div class="top-space">
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="FF0000"
+                                                    data-off-color="#FF0000" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">Rot</div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="FFFF00"
+                                                    data-off-color="#FFFF00" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Gelb
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="00FF00"
+                                                    data-off-color="#00FF00" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Grün
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="00FFFF"
+                                                    data-off-color="#00FFFF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Türkis
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="0000FF"
+                                                    data-off-color="#0000FF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Blau
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="FF00FF"
+                                                    data-off-color="#FF00FF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Pink
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="WZ_Haengelampe" data-set="rgb" data-set-on="FFFFFF"
+                                                    data-off-color="#FFFFFF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Weiß
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top-space-2x">
+                                <div data-type="volume" data-device="WZ_Haengelampe" data-get="brightness" data-set="brightness" data-min="0" data-max="100"
+                                    data-tickstep="10" data-unit="%" class="small dim-tick dim-back">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-row="10" data-col="1" data-sizex="1" data-sizey="3">
+                    <header>TV</header>
+                    <div class="top-space top-align">
+                        <div data-type="switch" data-device="WZ_TV" data-on-color="black" data-get-on="on" data-get-off="off" data-set-on="on"
+                            data-set-off="off" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                            data-icon="oa-it_television" class="normal">
+                        </div>
+                    </div>
+                </li>
+
+                <li data-row="10" data-col="2" data-sizex="1" data-sizey="3">
+                        <header>Lavalampe</header>
+                        <div class="top-space top-align">
+                            <div data-type="switch" data-device="WZ_Lavalampe" data-on-color="black" data-get-on="on" data-get-off="off" data-set-on="on"
+                                data-set-off="off" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                class="normal">
+                            </div>
+                        </div>
+                    </li>
+
+                    <li data-row="10" data-col="3" data-sizex="1" data-sizey="3">
+                            <header>Deckenlicht</header>
+                            <div class="top-space top-align">
+                                <div data-type="switch" data-device="WZ_Deckenlicht" data-on-color="black" data-get-on="on" data-get-off="off" data-set-on="on"
+                                    data-set-off="off" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="fs-light_ceiling" class="normal">
+                                </div>
+                            </div>
+                        </li>
+
+
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

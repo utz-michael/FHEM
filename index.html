@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="widget_base_width" content="75">
+    <meta name="widget_base_height" content="25">
+
+    <meta name="longpoll" content="websocket">
+
+    <script src="js/fhem-tablet-ui.js" defer></script>
+
+    <meta name='toast' content='0'>
+    <meta name="gridster_disable" content="1">
+
+    <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/font-awesome.min.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/openautomation.css" />
+    <link rel="stylesheet" href="/fhem/tablet/lib/fhemSVG.css" />
+
+
+    <title>FHEM-Tablet-UI</title>
+
+</head>
+
+<body>
+    <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="1" data-sizex="1" data-sizey="15">
+                <header>
+                    <div data-type="label" class="medium orange">Menu</header>
+                <div class="cell">
+                    <div data-type="pagebutton" data-url="#1_index.html" data-load="#1_index" data-active-pattern=".*#1_index.html" data-icon="fa-ship"
+                        data-on-background-color="#aa6900"></div>
+                    
+					
+					
+					
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_kueche.html" data-load="#1_kueche" data-active-pattern=".*#1_kueche.html" data-icon="fa-mobile"></div>
+                    <!--
+					<div data-type="pagebutton" data-url="#1_draussen.html" data-load="#1_draussen" data-active-pattern=".*#1_draussen.html"
+                    data-on-background-color="#aa6900" data-icon="oa-weather_storm"></div>
+					<div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_flur.html" data-load="#1_flur" data-active-pattern=".*#1_flur.html" data-icon="ftui-door"></div>
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_bath.html" data-load="#1_bath" data-active-pattern=".*#1_bath.html" data-icon="fa-bath"></div>
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_schlafzimmer.html" data-load="#1_schlafzimmer" data-active-pattern=".*#1_schlafzimmer.html"
+                        data-icon="fa-hotel"></div>
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_arbeitszimmer.html" data-load="#1_arbeitszimmer" data-active-pattern=".*#1_arbeitszimmer.html"
+                        data-icon="oa-it_pc"></div>
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_wohnzimmer.html" data-load="#1_wohnzimmer" data-active-pattern=".*#1_wohnzimmer.html"
+                        data-icon="oa-scene_livingroom"></div>
+                    <div data-on-background-color="#aa6900" data-type="pagebutton" data-url="#1_system.html" data-load="#1_system" data-active-pattern=".*#1_system.html" data-icon="fa-server"></div>
+                    <div data-type="link" data-color="blue" data-url="https://waschto.eu">
+                        <div data-type="image" data-url="https://waschto.eu/wp-content/uploads/2016/08/cropped-cropped-webiconNNN.png" data-size="50px"></div>
+
+
+                    </div>
+                -->
+
+                </div>
+            </li>
+            <li data-row="1" data-col="2" data-sizex="14" data-sizey="10">
+                <div class="page" id="1_index"></div>
+                <div class="page" id="1_draussen"></div>
+                <div class="page" id="1_kueche"></div>
+                <div class="page" id="1_flur"></div>
+                <div class="page" id="1_bath"></div>
+                <div class="page" id="1_dwd"></div>
+                <div class="page" id="1_arbeitszimmer"></div>
+                <div class="page" id="1_wohnzimmer"></div>
+                <div class="page" id="1_schlafzimmer"></div>
+                <div class="page" id="1_system"></div>
+            </li>
+
+        </ul>
+
+        </div>
+</body>
+
+</html>

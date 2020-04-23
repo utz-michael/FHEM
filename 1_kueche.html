@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * main page
+     *
+     load this page via widget pagebutton
+	-->
+
+</head>
+
+<body>
+    <div class="page" id="1_kueche">
+        <div class="gridster">
+            <ul>
+
+                <!--############################################################################-->
+                
+<li data-row="1" data-col="1" data-sizex="2" data-sizey="7">
+                 <header>Lichter</header>
+            <table width="90%" class="">
+                            <div class="top-space top-align">
+                                <div data-type="switch" data-device="BugKabine" data-on-color="black" data-get-on="ON" data-get-off="OFF" data-set-on="ON"
+                                    data-set-off="OFF" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="fs-light_ceiling" class="normal">
+                                </div>
+								<div class="">
+                                    Bug Kabine
+                                </div>
+                            </div>
+							<div class="top-space top-align">
+                                <div data-type="switch" data-device="Pantry" data-on-color="black" data-get-on="ON" data-get-off="OFF" data-set-on="ON"
+                                    data-set-off="OFF" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="fs-light_ceiling" class="normal">
+                                </div>
+								<div class="">
+                                    Pantry
+                                </div>
+                            </div>
+							
+		
+             </table>        
+           
+        </li>
+		
+		
+        <li data-row="1" data-col="3" data-sizex="2" data-sizey="7">
+              <header>Lichter</header>
+            <table width="90%" class="">
+                <tr>
+                 <div class="top-space top-align">
+                                <div data-type="switch" data-device="Badezimmer" data-on-color="black" data-get-on="ON" data-get-off="OFF" data-set-on="ON"
+                                    data-set-off="OFF" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="fs-light_ceiling" class="normal">
+                                </div>
+								<div class="">
+                                    Badezimmer
+                                </div>
+                            </div>
+								<div class="top-space top-align">
+                                <div data-type="switch" data-device="HeckKabine" data-on-color="black" data-get-on="ON" data-get-off="OFF" data-set-on="ON"
+                                    data-set-off="OFF" data-off-color="#808080" data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66"
+                                    data-icon="fs-light_ceiling" class="normal">
+                                </div>
+								<div class="">
+                                    Heck Kabine
+                                </div>
+                            </div>							
+		
+                    
+            </table>
+        </li>
+
+                
+<li class="" data-row="16" data-col="1" data-sizex="4" data-sizey="8">
+<header class="">LED Sitzgruppe</header>
+
+                    <div class="inline">
+                        <div class="left-space right-space">
+                            <div class="inline top-space">
+                                <div valign="top" data-type="switch" data-device="LEDSitzgruppe" data-get-on="ON.*" data-set-on="ON" data-get-off="OFF" data-set-on="OFF"data-on-color="black" data-off-color="#808080"
+                                    data-on-background-color="cornflowerblue" data-off-background-color="#3D4C66" data-icon="oa-light_pendant_light_round"
+                                    class="normal">
+                                </div>
+                                <div class="">
+                                    An/Aus
+                                </div>
+                            </div>
+                            <div class="inline top-space">
+                                <div data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="000000FF" data-off-color="#808080" data-off-background-color="#3D4C66"
+                                    data-icon="fa-paint-brush" class="normal">
+                                </div>
+                                <div class="">
+                                    Weiß
+                                </div>
+                            </div>
+                            <div class="inline top-space">
+                                <div data-type="popup" data-height="150px" data-width="700px" class="">
+                                    <div data-type="push" data-icon="fa-paint-brush" data-off-color="LEDSitzgruppe:Color" data-off-background-color="#3D4C66" class="">
+                                    </div>
+                                    <div class="">
+                                        Farbe
+                                    </div>
+                                    <div class="dialog dialogTransparent">
+                                        <header class="dialogheaderTransparent">LED-Leiste</header>
+                                        <div class="top-space">
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="FF000000"
+                                                    data-off-color="#FF0000" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">Rot</div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="FFFF0000"
+                                                    data-off-color="#FFFF00" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Gelb
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="00FF0000"
+                                                    data-off-color="#00FF00" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Grün
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="00FFFF00"
+                                                    data-off-color="#00FFFF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Türkis
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="0000FF00"
+                                                    data-off-color="#0000FF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Blau
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="FF00FF00"
+                                                    data-off-color="#FF00FF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Pink
+                                                </div>
+                                            </div>
+                                            <div class="inline">
+                                                <div onclick="$('.dialog-close').trigger('click');" data-type="push" data-device="LEDSitzgruppe" data-set="Color" data-set-on="000000FF"
+                                                    data-off-color="#FFFFFF" data-off-background-color="#3D4C66" data-icon="fa-paint-brush"
+                                                    class="big">
+                                                </div>
+                                                <div class="">
+                                                    Weiß
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top-space-2x">
+                                <div data-type="volume" data-device="LEDSitzgruppe" data-get="Dimmer" data-set="Dimmer" data-min="0" data-max="100" data-tickstep="10"
+                                    data-unit="%" class="small dim-tick dim-back">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

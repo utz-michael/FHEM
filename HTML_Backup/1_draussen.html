@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+     /* FHEM tablet ui */
+     /*
+     * main page
+     *
+     load this page via widget pagebutton
+	-->
+
+</head>
+
+<body>
+    <div class="page" id="1_draussen">
+        <div class="gridster">
+            <ul>
+
+
+<!--############################################################################-->
+<li class="" data-row="1" data-col="1" data-sizex="3" data-sizey="4">
+        <header class="">TEMPERATUR / LUFTFEUCHTE</header>
+        <div class="top-space">
+            <div class="bigger orange">
+                Wetter
+            </div>
+        </div>
+    </li>
+
+    <li data-row="1" data-col="4" data-sizex="6" data-sizey="4">
+            <header>Wetter am Bodensee</header>
+            <table width="90%" class="">
+                <tr>
+                    <td rowspan="5" style="text-align:center;vertical-align:top">
+                        <div data-type="weather" data-device="WetterProplanta" data-get="fc0_weatherDay" data-imageset="kleinklima" style="width:150px" class="centered">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="WetterProplanta" data-get="temperature" data-fix="1" data-limits='[-73,18,28]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%B0C%0A" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="WetterProplanta" data-get="statTemperatureTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="WetterProplanta" data-get="statTemperatureTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Temperatur
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inline">
+                            <div data-type="label" data-device="WetterProplanta" data-get="humidity" data-limits='[0,40,71]' data-colors='["cornflowerblue","green","firebrick"]'
+                                data-unit="%" class="bigger">
+                            </div>
+                            <div class="">
+                                <div data-type="klimatrend" data-device="WetterProplanta" data-get="statHumidityTendency" data-refperiod="1" class="inline large">
+                                </div>
+                                <div data-type="klimatrend" data-device="WetterProplanta" data-get="statHumidityTendency" data-refperiod="2" class="inline large">
+                                </div>
+                            </div>
+                            <div class="">
+                                Luftfeuchte
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align ">
+                                    Wind:
+                                </div>
+                                <div data-type="label" data-device="WetterProplanta" data-get="wind" data-unit="km/h" data-limits="[0, 20, 29, 39, 50, 62, 75, 89, 103, 117]"
+                                    data-colors='["green","green","#aa6900","#aa6900","firebrick","firebrick","firebrick","red","red","red"]'
+                                    style="display:inline" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align ">
+                                    Richtung:
+                                </div>
+                                <div data-type="label" data-device="WetterProplanta" data-get="windDir" data-unit="°" class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-align">
+                            <div class="">
+                                <div class="inline left-align ">
+                                    Druck:
+                                </div>
+                                <div data-type="label" data-device="WetterProplanta" data-get="pressure" data-unit="hPa" data-limits="[0,1005,1015]" data-colors='["cornflowerblue","green","#aa6900"]'
+                                    class="inline big border-right left-align">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+            </table>
+        </li>
+
+        <li data-row="1" data-col="10" data-sizex="2" data-sizey="4">
+            <header class="">Uhrzeit / Datum</header>
+            <div clas="center-align">
+                <div data-type="clock" data-format="H:i:s" data-interval="1000" class="orange bigger top-space">
+                </div>
+                <div data-type="clock" data-format="D. d.m.Y" data-shortday-length="2" class="grey big">
+                </div>
+            </div>
+        </li>
+
+<!--############################################################################-->
+
+                <li class="border-right" data-row="5" data-col="1" data-sizex="4" data-sizey="5">
+                    <header class="">7-TAGE VORHERSAGE</header>
+                    <div data-type="swiper" data-height="40px" data-width="300px" class="">
+                        <ul>
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc0_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc0_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc0_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc0_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc0_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc0_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc0_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="medium cell darker">
+                                        Heute
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc1_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc1_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc1_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc1_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc1_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc1_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc1_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc1_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc1_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc2_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc2_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc2_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc2_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc2_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc2_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc2_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc2_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc2_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc3_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc3_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc3_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc3_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc3_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc3_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc3_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc3_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc3_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc4_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc4_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc4_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc4_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc4_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc4_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc4_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc4_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc4_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc5_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc5_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc5_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc5_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc5_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc5_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc5_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc5_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc5_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="">
+                                <div calss="inline">
+                                    <div class="inline top">
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc6_tempMax" data-unit="°C&nbsp;" class="bigger">
+                                        </div>
+                                        <div class="inline medium">
+                                            min:&nbsp;
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc6_tempMin" data-unit="%B0C%0A" class="inline medium">
+                                        </div>
+                                    </div>
+                                    <div class="inline">
+
+                                        <div data-type="weather" data-device="WetterProplanta" data-get="fc6_weatherDay" data-imageset="kleinklima" class="centered"
+                                            style="width:100px;">
+                                        </div>
+                                        <div data-type="label" data-device="WetterProplanta" data-get="fc6_weatherDay" class="narrow newline">
+                                        </div>
+
+                                    </div>
+                                    <div class="inline left-space">
+                                        <div class="narrow">
+                                            <div class="medium inline">
+                                                Regen:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc6_chOfRainDay" data-unit="%" data-limits='[0,40,80]' data-colors='["green","#aa6900","firebrick"]'
+                                                class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div class="medium top-space inline">
+                                                Sonne:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc6_sun" data-limits='[0,40,80]' data-colors='["firebrick","#aa6900","green"]'
+                                                data-unit="%" class="medium inline">
+                                            </div>
+                                        </div>
+                                        <div class="narrow">
+                                            <div data-type="label" class="medium top-space inline">
+                                                UV:
+                                            </div>
+                                            <div data-type="label" data-device="WetterProplanta" data-get="fc6_uv" data-unit="" data-limits="[0,4,8,11]" data-colors='["green","#aa6900","firebrick","red"]'
+                                                class="medium top-space inline">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc6_date" data-substitution="toDate().eeee()+','" class="inline medium cell darker">
+                                    </div>
+                                    <div data-type="label" data-device="WetterProplanta" data-get="fc6_date" data-substitution="toDate().ddmm()" class="inline medium cell darker">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="" data-row="5" data-col="5" data-sizex="7" data-sizey="9">
+                <div class="top-space"
+                data-type="chart"
+                data-device="YahooWetter"
+                data-logdevice="LogYahooWetter"
+                data-logfile="-"
+                data-columnspec='["4:temperature","4:humidity"]'
+                data-style='["ftui l2","ftui l6fill"]'
+                data-high="150"
+                data-uaxis='["primary","secondary"]'
+                data-legend='["Temperatur","Luftfeuchtigkeit"]'
+                data-yunit="°C"
+                data-ytext="Temperatur"
+                data-minvalue="-15"
+                data-maxvalue="35"
+                data-yunit_sec="%"
+                data-ytext_sec="Luftfeuchtigkeit"
+                data-height="250"
+                data-yticks="auto"
+                data-minvalue_sec="0"
+                data-maxvalue_sec="100"
+                data-cursorgroup="1"
+                data-scrollgroup="1">
+           </div>
+        </li>
+
+
+    
+        
+
+
+
+
+                <li class="" data-row="18" data-col="1" data-sizex="11" data-sizey="3">
+                    <header class="">POLLENFLUG</header>
+                    <div class="">
+                        <div class="inline">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Ambrosia" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow">
+                            </div>
+                            <div class="cell narrow">Ambros.
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Ahorn" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Ahorn
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Beifuss" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Beifuß
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Birke" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Birke
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Buche" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Buche
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Eiche" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Eiche
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Erle" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Erle
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Esche" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Esche
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Gräser" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Gr&auml;ser
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Hasel" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-off-color="#808080" data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]'
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Hasel
+                            </div>
+                        </div>
+                        <div class="inline left-space">
+                            <div data-type="symbol" data-device="Pollenflug" data-get="Pappel" data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                                data-get-on='["0","1","2","3"]' data-on-colors='["green","green","yellow","firebrick"]' data-off-color="#808080"
+                                class="narrow ">
+                            </div>
+                            <div class="cell narrow">Pappel
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-row="10" data-col="1" data-sizex="4" data-sizey="7">
+                        <header>Unwetterwarnungen</header>
+                        <div data-type="uwz" data-device="Unwetterwarnungen" data-detail='["WarnUWZLevel_Color", "IconURL", "ShortText","WarnTime"]' data-max="1" class="top-space"></div>
+                      </li>
+
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
